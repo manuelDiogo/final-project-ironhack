@@ -20,8 +20,12 @@ const userSchema = new Schema(
     },
     surname: {
       type: String,
-      required: [true, "Please enter your surname."]
-    }
+      required: [true, "Please enter your surname."],
+    },
+    appointments: {
+      type: Schema.Types.ObjectId,
+      ref: "Appointment"
+    },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

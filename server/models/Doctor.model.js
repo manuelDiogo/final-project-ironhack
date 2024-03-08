@@ -4,7 +4,6 @@ const doctorSchema = new Schema(
     {
         doctor_name: String,
 
-
         place_of_activity: String,
 
         city: {
@@ -29,7 +28,10 @@ const doctorSchema = new Schema(
             //required: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         },
         reviews: Array,
-
+        appointments: {
+            type: Schema.Types.ObjectId,
+            ref: "Appointment"
+        },
         // this second object adds extra properties: `createdAt` and `updatedAt`
         //timestamps: true,
     }

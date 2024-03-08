@@ -1,392 +1,962 @@
 [
     {
-        "doctor_name": "Dr. Sofia Pereira",
-        "place_of_activity": "Hospital da Luz",
-        "city": "Porto",
-        "specialty": "Cardiology",
-        "healthcare_insurance": "Multicare",
-        "working_hours": {
-            "Monday": "08:00 - 16:00",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Miguel Rodrigues",
-        "place_of_activity": "Hospital de Santa Maria",
-        "city": "Lisbon",
-        "specialty": "Dermatology",
-        "healthcare_insurance": "ADSE",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Ana Costa",
-        "place_of_activity": "Hospital de Braga",
-        "city": "Braga",
-        "specialty": "Pediatrics",
-        "healthcare_insurance": "Advancecare",
-        "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Ricardo Alves",
-        "place_of_activity": "Hospital dos Lusiadas",
-        "city": "Lisbon",
-        "specialty": "Orthopedics",
-        "healthcare_insurance": "Tranquilidade",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Joana Santos",
-        "place_of_activity": "Hospital do Barreiro",
-        "city": "Barreiro",
-        "specialty": "Family Medicine",
-        "healthcare_insurance": "médis",
-        "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Andre Costa",
-        "place_of_activity": "Hospital da Prelada",
-        "city": "Porto",
-        "specialty": "Neurology",
-        "healthcare_insurance": "Ageas",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Marta Alves",
-        "place_of_activity": "Hospital de Sao Joao",
-        "city": "Porto",
-        "specialty": "Gynecology",
-        "healthcare_insurance": "Tranquilidade",
-        "working_hours": {
-            "Monday": "09:00 - 17:00",
-            "Wednesday": "09:30 - 17:30",
-            "Friday": "08:00 - 16:00"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Joao Costa",
-        "place_of_activity": "Hospital dos Covões",
-        "city": "Coimbra",
-        "specialty": "Urology",
-        "healthcare_insurance": "Multicare",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Ines Sousa",
+        "doctor_name": "Dr. Ana Rodrigues",
         "place_of_activity": "Hospital de Faro",
         "city": "Faro",
         "specialty": "Ophthalmology",
         "healthcare_insurance": "ADSE",
         "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
+            "Monday": [
+                9,
+                14,
+                15,
+                16,
+                18
+            ],
+            "Wednesday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Friday": [
+                9,
+                12,
+                13,
+                15,
+                18
+            ]
         },
-        "reviews": []
+        "reviews": [],
+        "appointments": []
     },
     {
-        "doctor_name": "Dr. Pedro Alves",
+        "doctor_name": "Dr. Ricardo Almeida",
         "place_of_activity": "Hospital de Braga",
         "city": "Braga",
         "specialty": "Pulmonology",
         "healthcare_insurance": "Advancecare",
         "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
+            "Monday": [
+                9,
+                14,
+                15,
+                16,
+                18
+            ],
+            "Wednesday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Friday": [
+                9,
+                12,
+                13,
+                15,
+                18
+            ]
         },
-        "reviews": []
+        "reviews": [],
+        "appointments": []
     },
     {
-        "doctor_name": "Dr. Sofia Rodrigues",
-        "place_of_activity": "Hospital da Luz",
-        "city": "Porto",
-        "specialty": "Cardiology",
-        "healthcare_insurance": "Multicare",
-        "working_hours": {
-            "Monday": "08:00 - 16:00",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Tiago Martins",
+        "doctor_name": "Dr. Joana Alves",
         "place_of_activity": "Hospital de Santa Maria",
         "city": "Lisbon",
-        "specialty": "Dermatology",
-        "healthcare_insurance": "ADSE",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Mariana Costa",
-        "place_of_activity": "Hospital de Braga",
-        "city": "Braga",
-        "specialty": "Pediatrics",
-        "healthcare_insurance": "Advancecare",
-        "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Andre Santos",
-        "place_of_activity": "Hospital dos Lusiadas",
-        "city": "Lisbon",
-        "specialty": "Orthopedics",
-        "healthcare_insurance": "Tranquilidade",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Patricia Almeida",
-        "place_of_activity": "Hospital do Barreiro",
-        "city": "Barreiro",
-        "specialty": "Family Medicine",
-        "healthcare_insurance": "médis",
-        "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Ricardo Santos",
-        "place_of_activity": "Hospital da Prelada",
-        "city": "Porto",
-        "specialty": "Neurology",
-        "healthcare_insurance": "Ageas",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Ines Silva",
-        "place_of_activity": "Hospital de Sao Joao",
-        "city": "Porto",
         "specialty": "Gynecology",
         "healthcare_insurance": "Tranquilidade",
         "working_hours": {
-            "Monday": "09:00 - 17:00",
-            "Wednesday": "09:30 - 17:30",
-            "Friday": "08:00 - 16:00"
+            "Tuesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Thursday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ],
+            "Saturday": [
+                9,
+                11,
+                13,
+                15,
+                18
+            ]
         },
-        "reviews": []
+        "reviews": [],
+        "appointments": []
     },
     {
-        "doctor_name": "Dr. Carlos Alves",
+        "doctor_name": "Dr. Miguel Santos",
         "place_of_activity": "Hospital dos Covões",
         "city": "Coimbra",
         "specialty": "Urology",
         "healthcare_insurance": "Multicare",
         "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
+            "Tuesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Thursday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ],
+            "Saturday": [
+                9,
+                11,
+                13,
+                15,
+                18
+            ]
         },
-        "reviews": []
+        "reviews": [],
+        "appointments": []
     },
     {
-        "doctor_name": "Dr. Helena Costa",
-        "place_of_activity": "Hospital de Faro",
-        "city": "Faro",
-        "specialty": "Ophthalmology",
-        "healthcare_insurance": "ADSE",
-        "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Joao Pereira",
-        "place_of_activity": "Hospital de Braga",
-        "city": "Braga",
-        "specialty": "Pulmonology",
-        "healthcare_insurance": "Advancecare",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Ana Costa",
-        "place_of_activity": "Hospital da Luz",
-        "city": "Porto",
-        "specialty": "Cardiology",
-        "healthcare_insurance": "Multicare",
-        "working_hours": {
-            "Monday": "08:00 - 16:00",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Diogo Martins",
-        "place_of_activity": "Hospital de Santa Maria",
-        "city": "Lisbon",
-        "specialty": "Dermatology",
-        "healthcare_insurance": "ADSE",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Patricia Silva",
-        "place_of_activity": "Hospital de Braga",
-        "city": "Braga",
-        "specialty": "Pediatrics",
-        "healthcare_insurance": "Advancecare",
-        "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Tiago Almeida",
-        "place_of_activity": "Hospital dos Lusiadas",
-        "city": "Lisbon",
-        "specialty": "Orthopedics",
-        "healthcare_insurance": "Tranquilidade",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Helena Rodrigues",
-        "place_of_activity": "Hospital do Barreiro",
-        "city": "Barreiro",
-        "specialty": "Family Medicine",
-        "healthcare_insurance": "médis",
-        "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Francisco Costa",
+        "doctor_name": "Dr. Ines Costa",
         "place_of_activity": "Hospital da Prelada",
         "city": "Porto",
         "specialty": "Neurology",
         "healthcare_insurance": "Ageas",
         "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
+            "Tuesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Thursday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ],
+            "Saturday": [
+                9,
+                11,
+                13,
+                15,
+                18
+            ]
         },
-        "reviews": []
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Pedro Silva",
+        "place_of_activity": "Hospital de Sao Joao",
+        "city": "Porto",
+        "specialty": "Dermatology",
+        "healthcare_insurance": "ADSE",
+        "working_hours": {
+            "Monday": [
+                9,
+                14,
+                15,
+                16,
+                18
+            ],
+            "Wednesday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Friday": [
+                9,
+                12,
+                13,
+                15,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Carolina Costa",
+        "place_of_activity": "Hospital do Barreiro",
+        "city": "Barreiro",
+        "specialty": "Family Medicine",
+        "healthcare_insurance": "médis",
+        "working_hours": {
+            "Monday": [
+                9,
+                14,
+                15,
+                16,
+                18
+            ],
+            "Wednesday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Friday": [
+                9,
+                12,
+                13,
+                15,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Diogo Almeida",
+        "place_of_activity": "Hospital da Luz",
+        "city": "Porto",
+        "specialty": "Cardiology",
+        "healthcare_insurance": "Multicare",
+        "working_hours": {
+            "Monday": [
+                9,
+                14,
+                15,
+                16,
+                18
+            ],
+            "Wednesday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Friday": [
+                9,
+                12,
+                13,
+                15,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Andre Alves",
+        "place_of_activity": "Hospital dos Lusiadas",
+        "city": "Lisbon",
+        "specialty": "Orthopedics",
+        "healthcare_insurance": "Tranquilidade",
+        "working_hours": {
+            "Tuesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Thursday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ],
+            "Saturday": [
+                9,
+                11,
+                13,
+                15,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Helena Almeida",
+        "place_of_activity": "Hospital de Braga",
+        "city": "Braga",
+        "specialty": "Pediatrics",
+        "healthcare_insurance": "Advancecare",
+        "working_hours": {
+            "Monday": [
+                9,
+                14,
+                15,
+                16,
+                18
+            ],
+            "Wednesday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Friday": [
+                9,
+                12,
+                13,
+                15,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Ana Silva",
+        "place_of_activity": "Hospital de Faro",
+        "city": "Faro",
+        "specialty": "Ophthalmology",
+        "healthcare_insurance": "ADSE",
+        "working_hours": {
+            "Monday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ],
+            "Wednesday": [
+                9,
+                13,
+                15,
+                16,
+                18
+            ],
+            "Friday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Pedro Almeida",
+        "place_of_activity": "Hospital de Braga",
+        "city": "Braga",
+        "specialty": "Pulmonology",
+        "healthcare_insurance": "Advancecare",
+        "working_hours": {
+            "Monday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Wednesday": [
+                9,
+                12,
+                15,
+                16,
+                18
+            ],
+            "Friday": [
+                11,
+                13,
+                14,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Joana Costa",
+        "place_of_activity": "Hospital de Santa Maria",
+        "city": "Lisbon",
+        "specialty": "Gynecology",
+        "healthcare_insurance": "Tranquilidade",
+        "working_hours": {
+            "Tuesday": [
+                9,
+                11,
+                14,
+                15,
+                17
+            ],
+            "Thursday": [
+                10,
+                12,
+                13,
+                16,
+                18
+            ],
+            "Saturday": [
+                11,
+                13,
+                15,
+                16,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Miguel Almeida",
+        "place_of_activity": "Hospital dos Covões",
+        "city": "Coimbra",
+        "specialty": "Urology",
+        "healthcare_insurance": "Multicare",
+        "working_hours": {
+            "Tuesday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                13,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Ines Santos",
+        "place_of_activity": "Hospital da Prelada",
+        "city": "Porto",
+        "specialty": "Neurology",
+        "healthcare_insurance": "Ageas",
+        "working_hours": {
+            "Tuesday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                16,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Sofia Almeida",
+        "place_of_activity": "Hospital de Sao Joao",
+        "city": "Porto",
+        "specialty": "Dermatology",
+        "healthcare_insurance": "ADSE",
+        "working_hours": {
+            "Monday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Wednesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Friday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Carolina Almeida",
+        "place_of_activity": "Hospital do Barreiro",
+        "city": "Barreiro",
+        "specialty": "Family Medicine",
+        "healthcare_insurance": "médis",
+        "working_hours": {
+            "Monday": [
+                11,
+                13,
+                14,
+                15,
+                17
+            ],
+            "Wednesday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Friday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Diogo Alves",
+        "place_of_activity": "Hospital da Luz",
+        "city": "Porto",
+        "specialty": "Cardiology",
+        "healthcare_insurance": "Multicare",
+        "working_hours": {
+            "Tuesday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                13,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Andre Silva",
+        "place_of_activity": "Hospital dos Lusiadas",
+        "city": "Lisbon",
+        "specialty": "Orthopedics",
+        "healthcare_insurance": "Tranquilidade",
+        "working_hours": {
+            "Tuesday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                16,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Rita Costa",
+        "place_of_activity": "Hospital de Braga",
+        "city": "Braga",
+        "specialty": "Pediatrics",
+        "healthcare_insurance": "Advancecare",
+        "working_hours": {
+            "Monday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Wednesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Friday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Ana Pereira",
+        "place_of_activity": "Hospital de Faro",
+        "city": "Faro",
+        "specialty": "Ophthalmology",
+        "healthcare_insurance": "ADSE",
+        "working_hours": {
+            "Monday": [
+                10,
+                11,
+                14,
+                15,
+                17
+            ],
+            "Wednesday": [
+                9,
+                13,
+                15,
+                16,
+                18
+            ],
+            "Friday": [
+                11,
+                12,
+                14,
+                16,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Pedro Costa",
+        "place_of_activity": "Hospital de Braga",
+        "city": "Braga",
+        "specialty": "Pulmonology",
+        "healthcare_insurance": "Advancecare",
+        "working_hours": {
+            "Monday": [
+                10,
+                13,
+                14,
+                16,
+                17
+            ],
+            "Wednesday": [
+                9,
+                12,
+                15,
+                16,
+                18
+            ],
+            "Friday": [
+                11,
+                13,
+                14,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Joana Pereira",
+        "place_of_activity": "Hospital de Santa Maria",
+        "city": "Lisbon",
+        "specialty": "Gynecology",
+        "healthcare_insurance": "Tranquilidade",
+        "working_hours": {
+            "Tuesday": [
+                10,
+                11,
+                14,
+                15,
+                17
+            ],
+            "Thursday": [
+                9,
+                12,
+                13,
+                16,
+                18
+            ],
+            "Saturday": [
+                11,
+                13,
+                15,
+                16,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Miguel Silva",
+        "place_of_activity": "Hospital dos Covões",
+        "city": "Coimbra",
+        "specialty": "Urology",
+        "healthcare_insurance": "Multicare",
+        "working_hours": {
+            "Tuesday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                13,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
     },
     {
         "doctor_name": "Dr. Ines Almeida",
+        "place_of_activity": "Hospital da Prelada",
+        "city": "Porto",
+        "specialty": "Neurology",
+        "healthcare_insurance": "Ageas",
+        "working_hours": {
+            "Tuesday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                16,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Sofia Pereira",
         "place_of_activity": "Hospital de Sao Joao",
         "city": "Porto",
-        "specialty": "Gynecology",
-        "healthcare_insurance": "Tranquilidade",
-        "working_hours": {
-            "Monday": "09:00 - 17:00",
-            "Wednesday": "09:30 - 17:30",
-            "Friday": "08:00 - 16:00"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Andre Santos",
-        "place_of_activity": "Hospital dos Covões",
-        "city": "Coimbra",
-        "specialty": "Urology",
-        "healthcare_insurance": "Multicare",
-        "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
-        },
-        "reviews": []
-    },
-    {
-        "doctor_name": "Dr. Carolina Alves",
-        "place_of_activity": "Hospital de Faro",
-        "city": "Faro",
-        "specialty": "Ophthalmology",
+        "specialty": "Dermatology",
         "healthcare_insurance": "ADSE",
         "working_hours": {
-            "Monday": "08:30 - 16:30",
-            "Wednesday": "09:00 - 17:00",
-            "Friday": "09:30 - 17:30"
+            "Monday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Wednesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Friday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ]
         },
-        "reviews": []
+        "reviews": [],
+        "appointments": []
     },
     {
-        "doctor_name": "Dr. Joao Rodrigues",
+        "doctor_name": "Dr. Carolina Costa",
+        "place_of_activity": "Hospital do Barreiro",
+        "city": "Barreiro",
+        "specialty": "Family Medicine",
+        "healthcare_insurance": "médis",
+        "working_hours": {
+            "Monday": [
+                11,
+                13,
+                14,
+                15,
+                17
+            ],
+            "Wednesday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Friday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Diogo Pereira",
+        "place_of_activity": "Hospital da Luz",
+        "city": "Porto",
+        "specialty": "Cardiology",
+        "healthcare_insurance": "Multicare",
+        "working_hours": {
+            "Tuesday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                13,
+                15,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Andre Almeida",
+        "place_of_activity": "Hospital dos Lusiadas",
+        "city": "Lisbon",
+        "specialty": "Orthopedics",
+        "healthcare_insurance": "Tranquilidade",
+        "working_hours": {
+            "Tuesday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ],
+            "Thursday": [
+                9,
+                13,
+                15,
+                16,
+                18
+            ],
+            "Saturday": [
+                10,
+                12,
+                14,
+                16,
+                17
+            ]
+        },
+        "reviews": [],
+        "appointments": []
+    },
+    {
+        "doctor_name": "Dr. Rita Pereira",
         "place_of_activity": "Hospital de Braga",
         "city": "Braga",
-        "specialty": "Pulmonology",
+        "specialty": "Pediatrics",
         "healthcare_insurance": "Advancecare",
         "working_hours": {
-            "Tuesday": "08:00 - 16:00",
-            "Thursday": "10:00 - 18:00",
-            "Saturday": "09:30 - 17:30"
+            "Monday": [
+                10,
+                12,
+                14,
+                16,
+                18
+            ],
+            "Wednesday": [
+                9,
+                13,
+                15,
+                17,
+                18
+            ],
+            "Friday": [
+                11,
+                12,
+                14,
+                15,
+                17
+            ]
         },
-        "reviews": []
+        "reviews": [],
+        "appointments": []
     }
 ]

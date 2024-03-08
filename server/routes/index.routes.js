@@ -1,15 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-
-
 router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
 // DOCTORS
 
-const Doctor = require ("../models/Doctor.model")
+const Doctor = require("../models/Doctor.model")
 
 // Show all doctors
 
@@ -52,7 +50,7 @@ router.put("/:doctorId", (req, res) => {
 
 // USERS
 
-const User = require ("../models/User.model")
+const User = require("../models/User.model")
 
 // create user
 
@@ -63,6 +61,7 @@ router.post("/signup", (req, res, next) => {
     password: req.body.password,
     name: req.body.name,
     surname: req.body.surname,
+    appointments: req.body.appointments,
   })
     .then((createdUser) => {
       console.log("User created ->", createdUser);
@@ -88,46 +87,80 @@ router.delete("/api/cohorts/:cohortId", (req, res) => {
 
 // DOCTORS
 
-const Appointment = require ("../models/Appointment.model")
+const Appointment = require("../models/Appointment.model")
 
 // create one appointment
 
-router.get("/appoint/:id", (req, res) => {
-  const docId = req.params.id;
- 
-  Appointment.findById(docId)
-    .populate("user") // Replaces the author ObjectId with the full author document
-    .populate("doc")
-    .then((book) => {
-      console.log("Retrieved book with author details ->", book);
- 
-      res.status(200).json(book);
+// router.post("/:docId/appoint", (req, res) => {
+//   const { docId } = req.params;
+//   const {  } = req.body;
+// })
+
+router.post("/:doctorId/appointments", (req, res) => {
+  const { doctorId } = req.params;
+  const { user, doc, day } = req.body;
+
+  Appointment.create({ user, doc, day })
+    .then((newAppointment) => {
+      return newAppointment
+        .findByIdAndUpdate(doctorId, {$push: { appointments: newAppointment._id }}, {new: true})
     })
-    .catch((error) => {
-      console.error("Error while retrieving book ->", error);
-      res.status(500).json({ error: "Failed to retrieve book" });
-    });
+    .then((response) => res.json(response))
+    .catch((error) => res.json(error));
 });
 
-// router.get("/appoint/:id", (req, res) => {
-//   const docId = req.params.id;
- 
-//   Appointment.create(docId)
-//     .populate("user")
-//     .populate("doc")
-//     .then((appointment) => {
-//       if (!appointment) {
-//         console.log("Appointment not found");
-//         return res.status(404).json({ error: "Appointment not found" });
-//       }
+router.get("/appointments/:appointmentsId", (req, res) => {
+  const { appointmentsId } = req.params;
+  //const { user, doc, day } = req.body;
 
-//       console.log("Retrieved appointment with user and doctor details ->", appointment);
-//       res.status(200).json(appointment);
-//     })
-//     .catch((error) => {
-//       console.error("Error while retrieving appointment ->", error);
-//       res.status(500).json({ error: "Failed to retrieve appointment" });
-//     });
+  Appointment.findById(appointmentsId)
+  .populate("user")
+  .populate("doctor")
+  .then((fullAp) => res.json(fullAp))
+    .catch((error) => res.json(error));
+})
+
+// router.get("/:doctorId", (req, res) => {
+//   const doctorId = req.params.id
+//   const { user, doc, hour } = req.body;
+
+//   Appointment.create({ user, doc, hour, doctor: doctorId })
+//   .populate("user")
+//   .then((doctor) => {
+//     console.log("Retrieved book with author details ->", doctor);
+
+//     res.status(200).json(doctor);
+//   })
+//   .catch((error) => {
+//     console.error("Error while retrieving book ->", error);
+//     res.status(500).json({ error: "Failed to retrieve book" });
+//   });
 // });
+
+
+
+
+
+
+// router.post("/:doctorId/appointments", (req, res) => {
+//   const { doctorId } = req.params;
+//   const { user, doc, day } = req.body;
+
+//   Appointment.create({ user, doc, day })
+//     .then((newAppointment) => {
+      
+        
+//     .then((response) => res.json(response))
+//     .catch((error) => res.json(error));
+// });
+  
+
+
+// return newAppointment
+//         .findByIdAndUpdate(doctorId, {
+//           $push: { appointments: newTask._id },
+//         })
+
+        
 
 module.exports = router;
