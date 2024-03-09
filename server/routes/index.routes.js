@@ -96,14 +96,49 @@ const Appointment = require("../models/Appointment.model")
 //   const {  } = req.body;
 // })
 
+// router.post("/:doctorId/appointments", (req, res) => {
+//   const { doctorId } = req.params;
+//   const { user, doc, day } = req.body;
+
+//   Appointment.create({ user:user._id, doc: doc._id, day })
+//     .then((newAppointment) => {
+//       return newAppointment
+//         .findByIdAndUpdate(doctorId, {$push: { appointments: newAppointment._id }}, {new: true})
+//     })
+//     .then((response) => res.json(response))
+//     .catch((error) => res.json(error));
+// });
+
+// router.post("/:doctorId/appointments", (req, res) => {
+//   const { doctorId } = req.params;
+//   const { day } = req.body;
+
+//   Appointment.create({ user: user._id, doc: doc._id, day })
+//     .then((newAppointment) => {
+
+//       return Doctor.findByIdAndUpdate(
+//         doctorId,
+//         { $push: { appointments: newAppointment._id } },
+//         { new: true }
+//       );
+//     })
+//     .then((updatedDoctor) => res.json(updatedDoctor))
+    
+//     .catch((error) => res.status(500).json({ error: "Internal server error" })
+//     );
+// });
+
 router.post("/:doctorId/appointments", (req, res) => {
   const { doctorId } = req.params;
-  const { user, doc, day } = req.body;
+  const { userId, docId, day } = req.body;
 
-  Appointment.create({ user, doc, day })
+  Appointment.create({ user: userId, doc: docId, day })
     .then((newAppointment) => {
-      return newAppointment
-        .findByIdAndUpdate(doctorId, {$push: { appointments: newAppointment._id }}, {new: true})
+      return Doctor.findByIdAndUpdate(
+        doctorId,
+        { $push: { appointments: newAppointment._id } },
+        { new: true }
+      );
     })
     .then((response) => res.json(response))
     .catch((error) => res.json(error));
@@ -113,10 +148,10 @@ router.get("/appointments/:appointmentsId", (req, res) => {
   const { appointmentsId } = req.params;
   //const { user, doc, day } = req.body;
 
-  Appointment.findById(appointmentsId)
-  .populate("user")
-  .populate("doctor")
-  .then((fullAp) => res.json(fullAp))
+  Appointment.findByIdAndUpdate(appointmentsId)
+    .populate("user")
+    .populate("doc")
+    .then((fullAp) => res.json(fullAp))
     .catch((error) => res.json(error));
 })
 
@@ -148,12 +183,12 @@ router.get("/appointments/:appointmentsId", (req, res) => {
 
 //   Appointment.create({ user, doc, day })
 //     .then((newAppointment) => {
-      
-        
+
+
 //     .then((response) => res.json(response))
 //     .catch((error) => res.json(error));
 // });
-  
+
 
 
 // return newAppointment
@@ -161,6 +196,6 @@ router.get("/appointments/:appointmentsId", (req, res) => {
 //           $push: { appointments: newTask._id },
 //         })
 
-        
+
 
 module.exports = router;
