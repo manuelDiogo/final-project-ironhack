@@ -26,10 +26,10 @@ const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
 
 const doctorRoutes = require("./routes/doctors.routes");
-app.use("/doctors", doctorRoutes);
+app.use("/api", doctorRoutes);
 
 const appointRoutes = require("./routes/appointment.routes")
-app.use("/appointment", appointRoutes)
+app.use("/api", appointRoutes)
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);

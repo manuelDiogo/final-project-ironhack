@@ -15,7 +15,7 @@ const User = require("../models/User.model")
 
 // Show all appointments (NOT WORKING)
 
-router.get("/allappoint", (req, res, next) => {
+router.get("/appointments", (req, res, next) => {
     Appointment.find({})
         .then((allappoint) => {
             res.status(200).json(allappoint);
@@ -27,8 +27,7 @@ router.get("/allappoint", (req, res, next) => {
 
 // Create an appointment step 1
 
-router.post("/:doctorId/appointments", (req, res) => {
-    const { doctorId } = req.params;
+router.post("/appointments", (req, res) => {
     const { userId, docId, day } = req.body;
 
     let appointmentId;
@@ -37,7 +36,7 @@ router.post("/:doctorId/appointments", (req, res) => {
         .then((newAppointment) => {
             appointmentId = newAppointment._id;
             return Doctor.findByIdAndUpdate(
-                doctorId,
+                docId,
                 { $push: { appointments: appointmentId } },
                 { new: true }
             );

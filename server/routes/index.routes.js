@@ -11,23 +11,23 @@ const User = require("../models/User.model")
 
 // create user
 
-router.post("/signup", (req, res, next) => {
+// router.post("/signup", (req, res, next) => {
 
-  User.create({
-    email: req.body.email,
-    password: req.body.password,
-    name: req.body.name,
-    surname: req.body.surname,
-    appointments: req.body.appointments,
-  })
-    .then((createdUser) => {
-      console.log("User created ->", createdUser);
-      res.status(201).json(createdUser);
-    })
-    .catch((err) => {
-      next(err)
-    });
-});
+//   User.create({
+//     email: req.body.email,
+//     password: req.body.password,
+//     name: req.body.name,
+//     surname: req.body.surname,
+//     appointments: req.body.appointments,
+//   })
+//     .then((createdUser) => {
+//       console.log("User created ->", createdUser);
+//       res.status(201).json(createdUser);
+//     })
+//     .catch((err) => {
+//       next(err)
+//     });
+// });
 
 // delete user
 
