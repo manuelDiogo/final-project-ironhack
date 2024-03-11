@@ -18,13 +18,6 @@ app.use(express.urlencoded({ extended: false }));
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
-
-// mongoose
-//     .connect("mongodb://localhost:27017/final-project-ironhack")
-//     .then(x => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
-//     .catch(err => console.error("Error connecting to mongo", err));
-
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
@@ -32,6 +25,11 @@ require("./config")(app);
 const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
 
+const doctorRoutes = require("./routes/doctors.routes");
+app.use("/doctors", doctorRoutes);
+
+const appointRoutes = require("./routes/appointment.routes")
+app.use("/appointment", appointRoutes)
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);

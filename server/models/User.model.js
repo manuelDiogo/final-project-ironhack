@@ -23,8 +23,7 @@ const userSchema = new Schema(
       required: [true, "Please enter your surname."],
     },
     appointments: {
-      type: Schema.Types.ObjectId,
-      ref: "Appointment"
+      type: Schema.Types.ObjectId, ref: "Appointment"
     },
   },
   {

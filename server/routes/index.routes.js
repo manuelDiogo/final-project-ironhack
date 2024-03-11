@@ -5,49 +5,6 @@ router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
-// DOCTORS
-
-const Doctor = require("../models/Doctor.model")
-
-// Show all doctors
-
-router.get("/alldocs", (req, res, next) => {
-  Doctor.find({})
-    .then((alldocs) => {
-      res.status(200).json(alldocs);
-      console.log(alldocs)
-    })
-    .catch((error) => {
-      next(error)
-    });
-});
-
-// Show 1 doctor by id
-
-router.get("/:doctorId", (req, res, next) => {
-
-  Doctor.findById(req.params.doctorId)
-    .then((doctorIdFind) => {
-      res.status(200).json(doctorIdFind)
-    })
-    .catch((error) => {
-      next(error)
-    })
-})
-
-//Update doctor
-
-router.put("/:doctorId", (req, res) => {
-
-  Doctor.findByIdAndUpdate(req.params.doctorId, req.body, { new: true })
-    .then((doctorIdUpdate) => {
-      res.status(200).json(doctorIdUpdate)
-    })
-    .catch((error) => {
-      next(error)
-    })
-})
-
 // USERS
 
 const User = require("../models/User.model")
@@ -73,21 +30,6 @@ router.post("/signup", (req, res, next) => {
 });
 
 // delete user
-
-router.delete("/api/cohorts/:cohortId", (req, res) => {
-
-  Cohort.findByIdAndDelete(req.params.cohortId)
-    .then((cohortIdDelete) => {
-      res.status(200).json(cohortIdDelete)
-    })
-    .catch((error) => {
-      next(error)
-    })
-})
-
-// DOCTORS
-
-const Appointment = require("../models/Appointment.model")
 
 // create one appointment
 
@@ -128,7 +70,7 @@ const Appointment = require("../models/Appointment.model")
 //     );
 // });
 
-router.post("/:doctorId/appointments", (req, res) => {
+/*router.post("/:doctorId/appointments", (req, res) => {
   const { doctorId } = req.params;
   const { userId, docId, day } = req.body;
 
@@ -153,7 +95,7 @@ router.get("/appointments/:appointmentsId", (req, res) => {
     .populate("doc")
     .then((fullAp) => res.json(fullAp))
     .catch((error) => res.json(error));
-})
+})*/
 
 // router.get("/:doctorId", (req, res) => {
 //   const doctorId = req.params.id
@@ -196,6 +138,16 @@ router.get("/appointments/:appointmentsId", (req, res) => {
 //           $push: { appointments: newTask._id },
 //         })
 
+/*router.delete("/appointments/:appointmentsId", (req, res) => {
+
+  Appointment.findByIdAndDelete(req.params.appointmentsId)
+    .then((cohortIdDelete) => {
+      res.status(200).json(cohortIdDelete)
+    })
+    .catch((error) => {
+      next(error)
+    })
+})*/
 
 
 module.exports = router;
