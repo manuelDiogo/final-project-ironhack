@@ -35,7 +35,7 @@ router.get("/:doctorId", (req, res, next) => {
     })
 })
 
-//Update doctor
+// Update doctor
 
 router.put("/:doctorId", (req, res) => {
 
@@ -48,17 +48,99 @@ router.put("/:doctorId", (req, res) => {
     })
 })
 
+// Get doc by day of the week
+
+// const query = Character.find({ name: 'Jean-Luc Picard' });
+// query.getFilter();
+
+// const today = new Date();
+
+//     const weekDay = today.getDay();
+
+//     console.log(today)
+
+router.get("/docsbyweekday/:weekDay", (req, res, next) => {
+
+  const { weekDay } = req.params;
+
+  if (weekDay == 1) {
+
+    Doctor.find({ 'working_hours.Monday': { $exists: true } })
+      .then((docWeekDay) => {
+        res.status(200).json(docWeekDay)
+      })
+      .catch((error) => {
+        next(error)
+      })
+  }
+
+  if (weekDay == 2) {
+
+    Doctor.find({ 'working_hours.Tuesday': { $exists: true } })
+      .then((docWeekDay) => {
+        res.status(200).json(docWeekDay)
+      })
+      .catch((error) => {
+        next(error)
+      })
+  }
+
+  if (weekDay == 3) {
+
+    Doctor.find({ 'working_hours.Wednesday': { $exists: true } })
+      .then((docWeekDay) => {
+        res.status(200).json(docWeekDay)
+      })
+      .catch((error) => {
+        next(error)
+      })
+  }
+
+  if (weekDay == 4) {
+
+    Doctor.find({ 'working_hours.Thursday': { $exists: true } })
+      .then((docWeekDay) => {
+        res.status(200).json(docWeekDay)
+      })
+      .catch((error) => {
+        next(error)
+      })
+  }
+
+  if (weekDay == 5) {
+
+    Doctor.find({ 'working_hours.Friday': { $exists: true } })
+      .then((docWeekDay) => {
+        res.status(200).json(docWeekDay)
+      })
+      .catch((error) => {
+        next(error)
+      })
+  }
+
+  if (weekDay == 6) {
+
+    Doctor.find({ 'working_hours.Saturday': { $exists: true } })
+      .then((docWeekDay) => {
+        res.status(200).json(docWeekDay)
+      })
+      .catch((error) => {
+        next(error)
+      })
+  }
+})
+
 // Delete Doctor
 
 router.delete("/:doctorId", (req, res, next) => {
-    const { doctorId } = req.params;
+  const { doctorId } = req.params;
 
-    Doctor.findByIdAndDelete(doctorId)
+  Doctor.findByIdAndDelete(doctorId)
     .then(() => {
-        res.json({ message: "doctor deleted" });
+      res.json({ message: "doctor deleted" });
     })
     .catch((error) => {
-        next(error);
+      next(error);
     });
 });
 
