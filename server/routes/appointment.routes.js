@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require('mongoose');
 
 router.get("/", (req, res, next) => {
     res.json("All good in here");
@@ -30,23 +31,33 @@ router.get("/appointments", (req, res, next) => {
 router.post("/appointments", (req, res) => {
     const { userId, docId, day } = req.body;
 
-    let appointmentId;
+    let appointmentsId;
+
+    //const userIdObject = new mongoose.Types.ObjectId(userId);
+    
+    //const appIdObject = new mongoose.Types.ObjectId(appointmentsId);
+    //onst docIdObject = new mongoose.Types.ObjectId(docId);
 
     Appointment.create({ user: userId, doc: docId, day })
         .then((newAppointment) => {
-            appointmentId = newAppointment._id;
+            appointmentsId = newAppointment._id;
+            
             return Doctor.findByIdAndUpdate(
                 docId,
-                { $push: { appointments: appointmentId } },
+                { $push: { appointments: appointmentsId } },
                 { new: true }
             );
         })
         .then(() => {
             return User.findByIdAndUpdate(
                 userId,
-                { $push: { appointments: appointmentId } },
+                { $push: { appointments: appointmentsId } },
                 { new: true }
             );
+        })
+        .then(() => {
+            console.log(appointmentsId)
+            return appointmentsId
         })
         .then((response) => res.json(response))
         .catch((error) => res.json(error));
@@ -54,6 +65,7 @@ router.post("/appointments", (req, res) => {
 
 router.get("/appointments/:appointmentsId", (req, res) => {
     const { appointmentsId } = req.params;
+    console.log(req.params)
     //const { user, doc, day } = req.body;
     Appointment.findById(appointmentsId)
         .populate("user")
