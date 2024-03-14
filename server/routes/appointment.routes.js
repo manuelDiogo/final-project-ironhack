@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require('mongoose');
+const { isAuthenticated } = require("../middleware/jwt.middleware")
 
 router.get("/", (req, res, next) => {
     res.json("All good in here");
@@ -34,14 +35,14 @@ router.post("/appointments", (req, res) => {
     let appointmentsId;
 
     //const userIdObject = new mongoose.Types.ObjectId(userId);
-    
+
     //const appIdObject = new mongoose.Types.ObjectId(appointmentsId);
     //onst docIdObject = new mongoose.Types.ObjectId(docId);
 
     Appointment.create({ user: userId, doc: docId, day })
         .then((newAppointment) => {
             appointmentsId = newAppointment._id;
-            
+
             return Doctor.findByIdAndUpdate(
                 docId,
                 { $push: { appointments: appointmentsId } },
@@ -56,7 +57,7 @@ router.post("/appointments", (req, res) => {
             );
         })
         .then(() => {
-            console.log(appointmentsId)
+            //console.log(appointmentsId)
             return appointmentsId
         })
         .then((response) => res.json(response))
@@ -74,15 +75,27 @@ router.get("/appointments/:appointmentsId", (req, res) => {
         .catch((error) => res.json(error));
 })
 
-router.delete("/appointments/:appointmentsId", (req, res) => {
+// Show appointments of a user
 
-    Appointment.findByIdAndDelete(req.params.appointmentsId)
-        .then((cohortIdDelete) => {
-            res.status(200).json(cohortIdDelete)
+// Delete an appointment
+
+router.delete("/appointments/:appointmentsId", isAuthenticated, (req, res) => {
+
+    const { payload } = req
+    console.log(payload)
+    Doctor.findByIdAndUpdate({ _id: payload._id }, { $pull: { appointments: req.params.appointmentsId } }, { new: true })
+    .then(() => {
+    User.findByIdAndUpdate({ _id: payload._id }, { $pull: { appointments: req.params.appointmentsId } }, { new: true })
+        .then(() => {
+            Appointment.findByIdAndDelete(req.params.appointmentsId)
+                .then((cohortIdDelete) => {
+                    res.status(200).json(cohortIdDelete)
+                })
         })
         .catch((error) => {
             next(error)
         })
+    })
 })
 
 module.exports = router;
